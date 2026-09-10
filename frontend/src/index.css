@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vitalink-navy: #0f172a;
+  --vitalink-blue: #0284c7;
+  --vitalink-blue-dark: #0369a1;
+  --vitalink-teal: #0d9488;
+  --vitalink-cyan: #06b6d4;
+  --vitalink-white: #ffffff;
+  --vitalink-surface: #f8fafc;
+  --vitalink-surface-card: #ffffff;
+  --vitalink-border: #e2e8f0;
+  --vitalink-text: #1e293b;
+  --vitalink-muted: #64748b;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--vitalink-text);
+  background-color: var(--vitalink-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom utility classes */
+.bg-vitalink-navy { background-color: var(--vitalink-navy); }
+.text-vitalink-navy { color: var(--vitalink-navy); }
+.bg-vitalink-blue { background-color: var(--vitalink-blue); }
+.text-vitalink-blue { color: var(--vitalink-blue); }
+.bg-vitalink-teal { background-color: var(--vitalink-teal); }
+.text-vitalink-teal { color: var(--vitalink-teal); }
+.bg-vitalink-cyan { background-color: var(--vitalink-cyan); }
+.text-vitalink-cyan { color: var(--vitalink-cyan); }
+
+.vitalink-gradient-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0369a1 100%);
+}
+
+.vitalink-gradient-brand {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+}
