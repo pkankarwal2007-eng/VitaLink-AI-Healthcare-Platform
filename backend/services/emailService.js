@@ -25,35 +25,31 @@ const getTransporter = () => {
   }
   pass = pass.replace(/\s+/g, '');
 
-  if (host.toLowerCase().includes('gmail') || user.toLowerCase().includes('gmail.com')) {
-  const isProduction = process.env.NODE_ENV === 'production';
-
-  if (isProduction) {
-    // Render production
-    return nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      requireTLS: true,
-      family: 4,
-      auth: {
-        user,
-        pass
-      }
-    });
-  }
-
-  // Localhost development
+if (host.toLowerCase().includes('gmail') || user.toLowerCase().includes('gmail.com')) {
   return nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    family: 4,
     auth: {
       user,
       pass
     }
   });
-} 
+}
+
+  // Localhost development
+//   return nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 465,
+//     secure: true,
+//     auth: {
+//       user,
+//       pass
+//     }
+//   });
+// } 
 
   return nodemailer.createTransport({
     host,
